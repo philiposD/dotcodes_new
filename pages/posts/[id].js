@@ -1,12 +1,18 @@
-import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Date from '../../components/date'
 import Head from 'next/head'
+import Container from '../../components/container'
+import Date from '../../components/date'
+import { getAllPostIds, getPostData } from '../../lib/posts'
 import utilStyles from '../../styles/utils.module.scss'
+// import hljs from 'highlight.js'
+
 
 export default function Post({ postData }) {
+
+  // hljs.highlightAll();
+  // console.log('posts');
+
   return (
-    <Layout>
+    <Container>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -17,7 +23,7 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-    </Layout>
+    </Container>
   )
 }
 

@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.scss'
 import Link from 'next/link'
+import utilStyles from '../../styles/utils.module.scss'
+import styles from './container.module.scss'
 
 const name = 'Your Name'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }) {
+export default function Container({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>

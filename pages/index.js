@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
-import { getSortedPostsData } from '../lib/posts'
-import Layout from '../components/layout'
-import utilStyles from '../styles/utils.module.scss'
+import Container from '../components/container'
 import Date from '../components/date'
+import { getSortedPostsData } from '../lib/posts'
+import utilStyles from '../styles/utils.module.scss'
 
 /* export default function Home() {
   return (
@@ -86,7 +84,15 @@ import Date from '../components/date'
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Container home>
+
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
+          rel="stylesheet"
+        />
+      </Head>
+
       {/* Keep the existing code here */}
 
       {/* Add this <section> tag below the existing <section> tag */}
@@ -106,7 +112,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
-    </Layout>
+    </Container>
   )
 }
 

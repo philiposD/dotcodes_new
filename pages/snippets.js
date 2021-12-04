@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../components/layout'
+import Container from '../components/container'
 
 export default function Snippets() {
   return (
-    <Layout>
+    <Container>
       <Head>
         <title>First Post</title>
       </Head>
@@ -14,6 +14,6 @@ export default function Snippets() {
           <a>Back to home</a>
         </Link>
       </h2>
-    </Layout>
+    </Container>
   )
-  }
+}
